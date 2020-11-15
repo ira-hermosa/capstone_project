@@ -1,0 +1,444 @@
+{
+	"info": {
+		"_postman_id": "f709352a-7dc2-4ea9-a1d1-1f89d8f97c48",
+		"name": "Heroku lesson-plan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Get categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lessonplanapp.herokuapp.com/categories",
+							"protocol": "https",
+							"host": [
+								"lessonplanapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get lessons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lessonplanapp.herokuapp.com/lessons",
+							"protocol": "https",
+							"host": [
+								"lessonplanapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"lessons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get lessons by category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lessonplanapp.herokuapp.com/categories/4/lessons",
+							"protocol": "https",
+							"host": [
+								"lessonplanapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories",
+								"4",
+								"lessons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post a category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFLRm52Vldrd2NWWXhQSjhVYmwyMCJ9.eyJpc3MiOiJodHRwczovL2JhY2tlbmRwcm9qLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjRlYTM3MTU5MzU4MDAwNjc1NTk3ZDMiLCJhdWQiOiJMZXNzb24iLCJpYXQiOjE2MDQ3NDQyMzEsImV4cCI6MTYwNDgzMDYzMSwiYXpwIjoid1lIS2JEY1JmTEEwQUt1Mk0yM2V2VlVWYTU5M002eDQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpsZXNzb25zIiwicGF0Y2g6bGVzc29ucyIsInBvc3Q6Y2F0ZWdvcmllcyIsInBvc3Q6bGVzc29ucyJdfQ.kzsRr_PJzyHF0PXe69KKSs_GdGzddOVjhKiFBZFw3DFvcpKlPcr7Gr9tjUQ8ryV9zBaeOOy0JgFscsj9hJUxK0bIkKJDJjAtUFhz-FmWXEI9WsQUbmYzKorgEQ-U5Om-7uYOB9HC_RnGYLzZYEwXKwLbgYxQsYhKF1ntNWRbvSe_cIKEHk7niz3SH_2vVvPjzGznNuURQaHTc-pafr_kIQee1TL-Bgowuxdm2EXmutwZwmG9onkHRWgCGMqkRmTZyjaCDpqlscgZYf1oc2gaDhh_vpGp6RAEjDdlTdrg6atmpf0XoaCTRL6_qmH6noKSvjFanIsISA_RV3L453YaRg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"Social Sciences\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lessonplanapp.herokuapp.com/categories",
+							"protocol": "https",
+							"host": [
+								"lessonplanapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post a lesson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFLRm52Vldrd2NWWXhQSjhVYmwyMCJ9.eyJpc3MiOiJodHRwczovL2JhY2tlbmRwcm9qLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjRlYTM3MTU5MzU4MDAwNjc1NTk3ZDMiLCJhdWQiOiJMZXNzb24iLCJpYXQiOjE2MDQ3NDQyMzEsImV4cCI6MTYwNDgzMDYzMSwiYXpwIjoid1lIS2JEY1JmTEEwQUt1Mk0yM2V2VlVWYTU5M002eDQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpsZXNzb25zIiwicGF0Y2g6bGVzc29ucyIsInBvc3Q6Y2F0ZWdvcmllcyIsInBvc3Q6bGVzc29ucyJdfQ.kzsRr_PJzyHF0PXe69KKSs_GdGzddOVjhKiFBZFw3DFvcpKlPcr7Gr9tjUQ8ryV9zBaeOOy0JgFscsj9hJUxK0bIkKJDJjAtUFhz-FmWXEI9WsQUbmYzKorgEQ-U5Om-7uYOB9HC_RnGYLzZYEwXKwLbgYxQsYhKF1ntNWRbvSe_cIKEHk7niz3SH_2vVvPjzGznNuURQaHTc-pafr_kIQee1TL-Bgowuxdm2EXmutwZwmG9onkHRWgCGMqkRmTZyjaCDpqlscgZYf1oc2gaDhh_vpGp6RAEjDdlTdrg6atmpf0XoaCTRL6_qmH6noKSvjFanIsISA_RV3L453YaRg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"lesson_title\": \"Educational psychology in everyday life\",\n            \"grade\": 12,\n            \"lesson_summary\": \"Learn how human learn across development stages\",\n            \"category\": 2\n           \n        \n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lessonplanapp.herokuapp.com/lessons",
+							"protocol": "https",
+							"host": [
+								"lessonplanapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"lessons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch a lesson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFLRm52Vldrd2NWWXhQSjhVYmwyMCJ9.eyJpc3MiOiJodHRwczovL2JhY2tlbmRwcm9qLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjRlYTM3MTU5MzU4MDAwNjc1NTk3ZDMiLCJhdWQiOiJMZXNzb24iLCJpYXQiOjE2MDQ3NDQyMzEsImV4cCI6MTYwNDgzMDYzMSwiYXpwIjoid1lIS2JEY1JmTEEwQUt1Mk0yM2V2VlVWYTU5M002eDQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpsZXNzb25zIiwicGF0Y2g6bGVzc29ucyIsInBvc3Q6Y2F0ZWdvcmllcyIsInBvc3Q6bGVzc29ucyJdfQ.kzsRr_PJzyHF0PXe69KKSs_GdGzddOVjhKiFBZFw3DFvcpKlPcr7Gr9tjUQ8ryV9zBaeOOy0JgFscsj9hJUxK0bIkKJDJjAtUFhz-FmWXEI9WsQUbmYzKorgEQ-U5Om-7uYOB9HC_RnGYLzZYEwXKwLbgYxQsYhKF1ntNWRbvSe_cIKEHk7niz3SH_2vVvPjzGznNuURQaHTc-pafr_kIQee1TL-Bgowuxdm2EXmutwZwmG9onkHRWgCGMqkRmTZyjaCDpqlscgZYf1oc2gaDhh_vpGp6RAEjDdlTdrg6atmpf0XoaCTRL6_qmH6noKSvjFanIsISA_RV3L453YaRg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"lesson_title\": \"Educational psychology in everyday life\",\n            \"grade\": 10,\n            \"lesson_summary\": \"Learn how human learn across development stages and the facilitation techniques to help them learn\",\n            \"category\": 2\n           \n        \n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lessonplanapp.herokuapp.com/lessons/6",
+							"protocol": "https",
+							"host": [
+								"lessonplanapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"lessons",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a lesson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFLRm52Vldrd2NWWXhQSjhVYmwyMCJ9.eyJpc3MiOiJodHRwczovL2JhY2tlbmRwcm9qLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjRlYTM3MTU5MzU4MDAwNjc1NTk3ZDMiLCJhdWQiOiJMZXNzb24iLCJpYXQiOjE2MDQ3NDQyMzEsImV4cCI6MTYwNDgzMDYzMSwiYXpwIjoid1lIS2JEY1JmTEEwQUt1Mk0yM2V2VlVWYTU5M002eDQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpsZXNzb25zIiwicGF0Y2g6bGVzc29ucyIsInBvc3Q6Y2F0ZWdvcmllcyIsInBvc3Q6bGVzc29ucyJdfQ.kzsRr_PJzyHF0PXe69KKSs_GdGzddOVjhKiFBZFw3DFvcpKlPcr7Gr9tjUQ8ryV9zBaeOOy0JgFscsj9hJUxK0bIkKJDJjAtUFhz-FmWXEI9WsQUbmYzKorgEQ-U5Om-7uYOB9HC_RnGYLzZYEwXKwLbgYxQsYhKF1ntNWRbvSe_cIKEHk7niz3SH_2vVvPjzGznNuURQaHTc-pafr_kIQee1TL-Bgowuxdm2EXmutwZwmG9onkHRWgCGMqkRmTZyjaCDpqlscgZYf1oc2gaDhh_vpGp6RAEjDdlTdrg6atmpf0XoaCTRL6_qmH6noKSvjFanIsISA_RV3L453YaRg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://lessonplanapp.herokuapp.com/lessons/4",
+							"protocol": "https",
+							"host": [
+								"lessonplanapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"lessons",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Member",
+			"item": [
+				{
+					"name": "Get categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lessonplanapp.herokuapp.com/categories",
+							"protocol": "https",
+							"host": [
+								"lessonplanapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get lessons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lessonplanapp.herokuapp.com/lessons",
+							"protocol": "https",
+							"host": [
+								"lessonplanapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"lessons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get lessons by category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lessonplanapp.herokuapp.com/categories/4/lessons",
+							"protocol": "https",
+							"host": [
+								"lessonplanapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories",
+								"4",
+								"lessons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post a category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFLRm52Vldrd2NWWXhQSjhVYmwyMCJ9.eyJpc3MiOiJodHRwczovL2JhY2tlbmRwcm9qLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjVhODkyNDUyNTgxMjAwNzAzYjA4ZDYiLCJhdWQiOiJMZXNzb24iLCJpYXQiOjE2MDQ3NDQ5NjMsImV4cCI6MTYwNDgzMTM2MywiYXpwIjoid1lIS2JEY1JmTEEwQUt1Mk0yM2V2VlVWYTU5M002eDQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbInBhdGNoOmxlc3NvbnMiLCJwb3N0Omxlc3NvbnMiXX0.bkGQRpaRAuGMyB74JFzg7LzVzCxpHjzN4ebSko-wqlD2sqh_xpxj4arqC-vZwp4Xxa1-mRwp53xlpFx7JZaUJwAMphowTXHjgScmoUhSn3O5CH8OlEmhjFUrUSbIp5aMl99PxMrPZJXCJizNrN1MPHt6vyc8y3mWGIFzgdDtRtDv3LREdtEGogplrjyZ-TBB5OMYXDP9YOSOzi_dtAUSx-RI1wr2vrTo0_Lai_9nU2U_Y1OABwDMiqPIXLgDsxR46z558maF6KYAbYxhL4VJ-Yo63a0Lyvp7i1xfHArQLw4nS8iwqJSboaWNUQMx3P8GEBy9vrTf99re-4CZs-FNhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"Statistics\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lessonplanapp.herokuapp.com/categories",
+							"protocol": "https",
+							"host": [
+								"lessonplanapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post a lesson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFLRm52Vldrd2NWWXhQSjhVYmwyMCJ9.eyJpc3MiOiJodHRwczovL2JhY2tlbmRwcm9qLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjVhODkyNDUyNTgxMjAwNzAzYjA4ZDYiLCJhdWQiOiJMZXNzb24iLCJpYXQiOjE2MDQ3NDQ5NjMsImV4cCI6MTYwNDgzMTM2MywiYXpwIjoid1lIS2JEY1JmTEEwQUt1Mk0yM2V2VlVWYTU5M002eDQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbInBhdGNoOmxlc3NvbnMiLCJwb3N0Omxlc3NvbnMiXX0.bkGQRpaRAuGMyB74JFzg7LzVzCxpHjzN4ebSko-wqlD2sqh_xpxj4arqC-vZwp4Xxa1-mRwp53xlpFx7JZaUJwAMphowTXHjgScmoUhSn3O5CH8OlEmhjFUrUSbIp5aMl99PxMrPZJXCJizNrN1MPHt6vyc8y3mWGIFzgdDtRtDv3LREdtEGogplrjyZ-TBB5OMYXDP9YOSOzi_dtAUSx-RI1wr2vrTo0_Lai_9nU2U_Y1OABwDMiqPIXLgDsxR46z558maF6KYAbYxhL4VJ-Yo63a0Lyvp7i1xfHArQLw4nS8iwqJSboaWNUQMx3P8GEBy9vrTf99re-4CZs-FNhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"lesson_title\": \"Magnetism\",\n            \"grade\": 10,\n            \"lesson_summary\": \"Students will learn the forces between magnests and magnetic materials\",\n            \"category\": 4\n           \n        \n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lessonplanapp.herokuapp.com/lessons",
+							"protocol": "https",
+							"host": [
+								"lessonplanapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"lessons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch a lesson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFLRm52Vldrd2NWWXhQSjhVYmwyMCJ9.eyJpc3MiOiJodHRwczovL2JhY2tlbmRwcm9qLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjVhODkyNDUyNTgxMjAwNzAzYjA4ZDYiLCJhdWQiOiJMZXNzb24iLCJpYXQiOjE2MDQ3NDQ5NjMsImV4cCI6MTYwNDgzMTM2MywiYXpwIjoid1lIS2JEY1JmTEEwQUt1Mk0yM2V2VlVWYTU5M002eDQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbInBhdGNoOmxlc3NvbnMiLCJwb3N0Omxlc3NvbnMiXX0.bkGQRpaRAuGMyB74JFzg7LzVzCxpHjzN4ebSko-wqlD2sqh_xpxj4arqC-vZwp4Xxa1-mRwp53xlpFx7JZaUJwAMphowTXHjgScmoUhSn3O5CH8OlEmhjFUrUSbIp5aMl99PxMrPZJXCJizNrN1MPHt6vyc8y3mWGIFzgdDtRtDv3LREdtEGogplrjyZ-TBB5OMYXDP9YOSOzi_dtAUSx-RI1wr2vrTo0_Lai_9nU2U_Y1OABwDMiqPIXLgDsxR46z558maF6KYAbYxhL4VJ-Yo63a0Lyvp7i1xfHArQLw4nS8iwqJSboaWNUQMx3P8GEBy9vrTf99re-4CZs-FNhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"lesson_title\": \"Magnetism\",\n            \"grade\": 9,\n            \"lesson_summary\": \"Students will learn the forces between magnests and magnetic materials. Students will also distinguish between magnetic and non-magnetic material\",\n            \"category\": 4\n           \n        \n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lessonplanapp.herokuapp.com/lessons/2",
+							"protocol": "https",
+							"host": [
+								"lessonplanapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"lessons",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a lesson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFLRm52Vldrd2NWWXhQSjhVYmwyMCJ9.eyJpc3MiOiJodHRwczovL2JhY2tlbmRwcm9qLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjVhODkyNDUyNTgxMjAwNzAzYjA4ZDYiLCJhdWQiOiJMZXNzb24iLCJpYXQiOjE2MDQ3NDQ5NjMsImV4cCI6MTYwNDgzMTM2MywiYXpwIjoid1lIS2JEY1JmTEEwQUt1Mk0yM2V2VlVWYTU5M002eDQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbInBhdGNoOmxlc3NvbnMiLCJwb3N0Omxlc3NvbnMiXX0.bkGQRpaRAuGMyB74JFzg7LzVzCxpHjzN4ebSko-wqlD2sqh_xpxj4arqC-vZwp4Xxa1-mRwp53xlpFx7JZaUJwAMphowTXHjgScmoUhSn3O5CH8OlEmhjFUrUSbIp5aMl99PxMrPZJXCJizNrN1MPHt6vyc8y3mWGIFzgdDtRtDv3LREdtEGogplrjyZ-TBB5OMYXDP9YOSOzi_dtAUSx-RI1wr2vrTo0_Lai_9nU2U_Y1OABwDMiqPIXLgDsxR46z558maF6KYAbYxhL4VJ-Yo63a0Lyvp7i1xfHArQLw4nS8iwqJSboaWNUQMx3P8GEBy9vrTf99re-4CZs-FNhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://lessonplanapp.herokuapp.com/lessons/4",
+							"protocol": "https",
+							"host": [
+								"lessonplanapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"lessons",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

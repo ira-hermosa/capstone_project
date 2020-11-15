@@ -1,0 +1,430 @@
+{
+	"info": {
+		"_postman_id": "8d5788eb-eb6f-48fa-be55-26b77f36e82c",
+		"name": "Local lesson-plan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Get categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get lessons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/lessons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"lessons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get lessons by category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/categories/2/lessons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categories",
+								"2",
+								"lessons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post a lesson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFLRm52Vldrd2NWWXhQSjhVYmwyMCJ9.eyJpc3MiOiJodHRwczovL2JhY2tlbmRwcm9qLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjRlYTM3MTU5MzU4MDAwNjc1NTk3ZDMiLCJhdWQiOiJMZXNzb24iLCJpYXQiOjE2MDQ3NDQyMzEsImV4cCI6MTYwNDgzMDYzMSwiYXpwIjoid1lIS2JEY1JmTEEwQUt1Mk0yM2V2VlVWYTU5M002eDQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpsZXNzb25zIiwicGF0Y2g6bGVzc29ucyIsInBvc3Q6Y2F0ZWdvcmllcyIsInBvc3Q6bGVzc29ucyJdfQ.kzsRr_PJzyHF0PXe69KKSs_GdGzddOVjhKiFBZFw3DFvcpKlPcr7Gr9tjUQ8ryV9zBaeOOy0JgFscsj9hJUxK0bIkKJDJjAtUFhz-FmWXEI9WsQUbmYzKorgEQ-U5Om-7uYOB9HC_RnGYLzZYEwXKwLbgYxQsYhKF1ntNWRbvSe_cIKEHk7niz3SH_2vVvPjzGznNuURQaHTc-pafr_kIQee1TL-Bgowuxdm2EXmutwZwmG9onkHRWgCGMqkRmTZyjaCDpqlscgZYf1oc2gaDhh_vpGp6RAEjDdlTdrg6atmpf0XoaCTRL6_qmH6noKSvjFanIsISA_RV3L453YaRg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"lesson_title\": \"Go around the world\",\n            \"grade\": 4,\n            \"lesson_summary\": \"If you’re looking to have some fun with exam texts, then we’ve got you covered with this multi-round Jekyll and Hyde quiz, and board games on A Christmas Carol and An Inspector Calls. Get students to have fun re-capping poetic devices and language techniques with a fun snakes and ladders game and a Jeopardy-style team game on poetic terminology. For a more in-depth writing task, inspire learners with an immersive project, exploring strange happenings in an alternative world.\",\n            \"category\": 2\n           \n        \n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/lessons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"lessons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post a category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFLRm52Vldrd2NWWXhQSjhVYmwyMCJ9.eyJpc3MiOiJodHRwczovL2JhY2tlbmRwcm9qLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjRlYTM3MTU5MzU4MDAwNjc1NTk3ZDMiLCJhdWQiOiJMZXNzb24iLCJpYXQiOjE2MDQ3NDQyMzEsImV4cCI6MTYwNDgzMDYzMSwiYXpwIjoid1lIS2JEY1JmTEEwQUt1Mk0yM2V2VlVWYTU5M002eDQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpsZXNzb25zIiwicGF0Y2g6bGVzc29ucyIsInBvc3Q6Y2F0ZWdvcmllcyIsInBvc3Q6bGVzc29ucyJdfQ.kzsRr_PJzyHF0PXe69KKSs_GdGzddOVjhKiFBZFw3DFvcpKlPcr7Gr9tjUQ8ryV9zBaeOOy0JgFscsj9hJUxK0bIkKJDJjAtUFhz-FmWXEI9WsQUbmYzKorgEQ-U5Om-7uYOB9HC_RnGYLzZYEwXKwLbgYxQsYhKF1ntNWRbvSe_cIKEHk7niz3SH_2vVvPjzGznNuURQaHTc-pafr_kIQee1TL-Bgowuxdm2EXmutwZwmG9onkHRWgCGMqkRmTZyjaCDpqlscgZYf1oc2gaDhh_vpGp6RAEjDdlTdrg6atmpf0XoaCTRL6_qmH6noKSvjFanIsISA_RV3L453YaRg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"Accounting\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch a lesson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFLRm52Vldrd2NWWXhQSjhVYmwyMCJ9.eyJpc3MiOiJodHRwczovL2JhY2tlbmRwcm9qLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjRlYTM3MTU5MzU4MDAwNjc1NTk3ZDMiLCJhdWQiOiJMZXNzb24iLCJpYXQiOjE2MDQ3NDQyMzEsImV4cCI6MTYwNDgzMDYzMSwiYXpwIjoid1lIS2JEY1JmTEEwQUt1Mk0yM2V2VlVWYTU5M002eDQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpsZXNzb25zIiwicGF0Y2g6bGVzc29ucyIsInBvc3Q6Y2F0ZWdvcmllcyIsInBvc3Q6bGVzc29ucyJdfQ.kzsRr_PJzyHF0PXe69KKSs_GdGzddOVjhKiFBZFw3DFvcpKlPcr7Gr9tjUQ8ryV9zBaeOOy0JgFscsj9hJUxK0bIkKJDJjAtUFhz-FmWXEI9WsQUbmYzKorgEQ-U5Om-7uYOB9HC_RnGYLzZYEwXKwLbgYxQsYhKF1ntNWRbvSe_cIKEHk7niz3SH_2vVvPjzGznNuURQaHTc-pafr_kIQee1TL-Bgowuxdm2EXmutwZwmG9onkHRWgCGMqkRmTZyjaCDpqlscgZYf1oc2gaDhh_vpGp6RAEjDdlTdrg6atmpf0XoaCTRL6_qmH6noKSvjFanIsISA_RV3L453YaRg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"lesson_title\": \"Exploring neighbourhoods around the continent\",\n            \"grade\": 5,\n            \"lesson_summary\": \"Create a map of your neighborhood without key map elements, like a compass rose, labels, and a key. Then have a family member or friend try to use the map to reach a particular destination. Talk about the ways in which the map was difficult to use.\",\n            \"category\": 4\n           \n        \n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/lessons/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"lessons",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a lesson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFLRm52Vldrd2NWWXhQSjhVYmwyMCJ9.eyJpc3MiOiJodHRwczovL2JhY2tlbmRwcm9qLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjRlYTM3MTU5MzU4MDAwNjc1NTk3ZDMiLCJhdWQiOiJMZXNzb24iLCJpYXQiOjE2MDQ3NDQyMzEsImV4cCI6MTYwNDgzMDYzMSwiYXpwIjoid1lIS2JEY1JmTEEwQUt1Mk0yM2V2VlVWYTU5M002eDQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpsZXNzb25zIiwicGF0Y2g6bGVzc29ucyIsInBvc3Q6Y2F0ZWdvcmllcyIsInBvc3Q6bGVzc29ucyJdfQ.kzsRr_PJzyHF0PXe69KKSs_GdGzddOVjhKiFBZFw3DFvcpKlPcr7Gr9tjUQ8ryV9zBaeOOy0JgFscsj9hJUxK0bIkKJDJjAtUFhz-FmWXEI9WsQUbmYzKorgEQ-U5Om-7uYOB9HC_RnGYLzZYEwXKwLbgYxQsYhKF1ntNWRbvSe_cIKEHk7niz3SH_2vVvPjzGznNuURQaHTc-pafr_kIQee1TL-Bgowuxdm2EXmutwZwmG9onkHRWgCGMqkRmTZyjaCDpqlscgZYf1oc2gaDhh_vpGp6RAEjDdlTdrg6atmpf0XoaCTRL6_qmH6noKSvjFanIsISA_RV3L453YaRg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/lessons/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"lessons",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Member",
+			"item": [
+				{
+					"name": "Get lessons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/lessons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"lessons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get lessons by category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/categories/2/lessons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categories",
+								"2",
+								"lessons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post a lesson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFLRm52Vldrd2NWWXhQSjhVYmwyMCJ9.eyJpc3MiOiJodHRwczovL2JhY2tlbmRwcm9qLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjVhODkyNDUyNTgxMjAwNzAzYjA4ZDYiLCJhdWQiOiJMZXNzb24iLCJpYXQiOjE2MDQ3NDQ5NjMsImV4cCI6MTYwNDgzMTM2MywiYXpwIjoid1lIS2JEY1JmTEEwQUt1Mk0yM2V2VlVWYTU5M002eDQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbInBhdGNoOmxlc3NvbnMiLCJwb3N0Omxlc3NvbnMiXX0.bkGQRpaRAuGMyB74JFzg7LzVzCxpHjzN4ebSko-wqlD2sqh_xpxj4arqC-vZwp4Xxa1-mRwp53xlpFx7JZaUJwAMphowTXHjgScmoUhSn3O5CH8OlEmhjFUrUSbIp5aMl99PxMrPZJXCJizNrN1MPHt6vyc8y3mWGIFzgdDtRtDv3LREdtEGogplrjyZ-TBB5OMYXDP9YOSOzi_dtAUSx-RI1wr2vrTo0_Lai_9nU2U_Y1OABwDMiqPIXLgDsxR46z558maF6KYAbYxhL4VJ-Yo63a0Lyvp7i1xfHArQLw4nS8iwqJSboaWNUQMx3P8GEBy9vrTf99re-4CZs-FNhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"lesson_title\": \"English Poem\",\n            \"grade\": 6,\n            \"lesson_summary\": \"Choose the poems students are going to read according to their language level so that you do not have to explain too many words because that would kill the enjoyment. Vary the activities on the poems because variety is the spice of life and learning alike.\",\n            \"category\": 3\n           \n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/lessons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"lessons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post a category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFLRm52Vldrd2NWWXhQSjhVYmwyMCJ9.eyJpc3MiOiJodHRwczovL2JhY2tlbmRwcm9qLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjVhODkyNDUyNTgxMjAwNzAzYjA4ZDYiLCJhdWQiOiJMZXNzb24iLCJpYXQiOjE2MDQ3NDQ5NjMsImV4cCI6MTYwNDgzMTM2MywiYXpwIjoid1lIS2JEY1JmTEEwQUt1Mk0yM2V2VlVWYTU5M002eDQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbInBhdGNoOmxlc3NvbnMiLCJwb3N0Omxlc3NvbnMiXX0.bkGQRpaRAuGMyB74JFzg7LzVzCxpHjzN4ebSko-wqlD2sqh_xpxj4arqC-vZwp4Xxa1-mRwp53xlpFx7JZaUJwAMphowTXHjgScmoUhSn3O5CH8OlEmhjFUrUSbIp5aMl99PxMrPZJXCJizNrN1MPHt6vyc8y3mWGIFzgdDtRtDv3LREdtEGogplrjyZ-TBB5OMYXDP9YOSOzi_dtAUSx-RI1wr2vrTo0_Lai_9nU2U_Y1OABwDMiqPIXLgDsxR46z558maF6KYAbYxhL4VJ-Yo63a0Lyvp7i1xfHArQLw4nS8iwqJSboaWNUQMx3P8GEBy9vrTf99re-4CZs-FNhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"Italian\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch a lesson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFLRm52Vldrd2NWWXhQSjhVYmwyMCJ9.eyJpc3MiOiJodHRwczovL2JhY2tlbmRwcm9qLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjVhODkyNDUyNTgxMjAwNzAzYjA4ZDYiLCJhdWQiOiJMZXNzb24iLCJpYXQiOjE2MDQ3NDQ5NjMsImV4cCI6MTYwNDgzMTM2MywiYXpwIjoid1lIS2JEY1JmTEEwQUt1Mk0yM2V2VlVWYTU5M002eDQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbInBhdGNoOmxlc3NvbnMiLCJwb3N0Omxlc3NvbnMiXX0.bkGQRpaRAuGMyB74JFzg7LzVzCxpHjzN4ebSko-wqlD2sqh_xpxj4arqC-vZwp4Xxa1-mRwp53xlpFx7JZaUJwAMphowTXHjgScmoUhSn3O5CH8OlEmhjFUrUSbIp5aMl99PxMrPZJXCJizNrN1MPHt6vyc8y3mWGIFzgdDtRtDv3LREdtEGogplrjyZ-TBB5OMYXDP9YOSOzi_dtAUSx-RI1wr2vrTo0_Lai_9nU2U_Y1OABwDMiqPIXLgDsxR46z558maF6KYAbYxhL4VJ-Yo63a0Lyvp7i1xfHArQLw4nS8iwqJSboaWNUQMx3P8GEBy9vrTf99re-4CZs-FNhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"lesson_title\": \"English Poems\",\n            \"grade\": 9,\n            \"lesson_summary\": \"Choose the poems students are going to read according to their language level so that you do not have to explain too many words because that would kill the enjoyment. Vary the activities on the poems because variety is the spice of life and learning alike.\",\n            \"category\": 3\n           \n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/lessons/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"lessons",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a lesson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFLRm52Vldrd2NWWXhQSjhVYmwyMCJ9.eyJpc3MiOiJodHRwczovL2JhY2tlbmRwcm9qLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjVhODkyNDUyNTgxMjAwNzAzYjA4ZDYiLCJhdWQiOiJMZXNzb24iLCJpYXQiOjE2MDQ3NDQ5NjMsImV4cCI6MTYwNDgzMTM2MywiYXpwIjoid1lIS2JEY1JmTEEwQUt1Mk0yM2V2VlVWYTU5M002eDQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbInBhdGNoOmxlc3NvbnMiLCJwb3N0Omxlc3NvbnMiXX0.bkGQRpaRAuGMyB74JFzg7LzVzCxpHjzN4ebSko-wqlD2sqh_xpxj4arqC-vZwp4Xxa1-mRwp53xlpFx7JZaUJwAMphowTXHjgScmoUhSn3O5CH8OlEmhjFUrUSbIp5aMl99PxMrPZJXCJizNrN1MPHt6vyc8y3mWGIFzgdDtRtDv3LREdtEGogplrjyZ-TBB5OMYXDP9YOSOzi_dtAUSx-RI1wr2vrTo0_Lai_9nU2U_Y1OABwDMiqPIXLgDsxR46z558maF6KYAbYxhL4VJ-Yo63a0Lyvp7i1xfHArQLw4nS8iwqJSboaWNUQMx3P8GEBy9vrTf99re-4CZs-FNhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/lessons/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"lessons",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
